@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+.morph-btn {
+    position: relative;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  
+
+  .morph-btn:hover {
+    color: white;
+    background-color: purple;
+    text-transform: uppercase;
+  }
+
+  .morph-btn:hover:before {
+    transform: scale(2);
+  }
+
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+  
+  /* 11 */
+.btn-11 {
+    border: none;
+    background: rgb(140, 136, 155);
+      background: linear-gradient(0deg, rgb(43, 3, 123) 0%, rgb(30, 121, 219) 100%);
+      color: #fff;
+      overflow: hidden;
+  }
+  .btn-11:hover {
+      text-decoration: none;
+      color: #fff;
+  }
+  .btn-11:before {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      top: -180px;
+      left: 0;
+      width: 30px;
+      height: 100%;
+      background-color: #fff;
+      animation: shiny-btn1 3s ease-in-out infinite;
+  }
+  .btn-11:hover{
+    opacity: .7;
+  }
+  .btn-11:active{
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.2),
+      inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+  }
+  
+  
+  @keyframes shiny-btn1 {
+      0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+      80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+      81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+      100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+  }
+  
+
+  #landingSection {
+    background: url('./assets/landingPage.jpg') center/cover;
+    color: #fff;
+    height: 100vh;
+    overflow: auto;
+    position: relative;
+  }
+  
+  /* Black overlay with transparency */
+  #landingSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust the alpha value as needed */
+    pointer-events: none; /* This makes the overlay non-interactive */
+  }
+  
+  #landingHeading,
+  #landingSubHeading,
+  #getStarted {
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    z-index: 2;
+    position: relative; /* Ensure the elements have a stacking context */
+  }
+  
+  #getStarted:hover {
+    cursor: pointer;
+  }
+  
+  #landingHeading {
+    font-size: 3.5rem; /* Adjust the font size as needed */
+  }
+  
+  #landingSubHeading {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+  }
+  
+  #getStarted {
+    font-size: 1rem; /* Adjust the font size as needed */
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px;
+    background-color: #3498db;
+    margin-top: 1rem;
+  }
+
+  #getStarted:hover{
+    color: white;
+    font-weight: 200;
+    background-color: navy;
+  }
+  
