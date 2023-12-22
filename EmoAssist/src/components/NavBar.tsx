@@ -11,6 +11,8 @@ import {
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import Logo from "../assets/logo.png";
+
 const NavBar = () => {
   const { isSignedIn, user } = useUser();
 
@@ -28,7 +30,7 @@ const NavBar = () => {
       <div className="container">
         <Link className="navbar-brand" to="/">
           {/* Your logo or text */}
-          <img alt="Logo" />
+          <img alt="Logo" src={Logo} style={{ height: "70px" }} />
         </Link>
         <button
           className="navbar-toggler"
