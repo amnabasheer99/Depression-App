@@ -246,4 +246,38 @@ input {
  color:    rgb(253, 252, 253);
 }
 
+#dashboard {
+  padding-top: 100px; /* Adjust the top padding as needed */
+  height: 100vh;
+}
+
+/* Add your other styles as needed */
+#chat-container {
+  width: 300px; /* Set your desired width */
+  height: 400px; /* Set your desired height */
+  border: 1px solid #ccc; /* Optional: Add border for better appearance */
+  overflow-y: auto; /* Enable vertical scroll when content exceeds the height */
+}
+
+.message {
+  padding: 8px;
+  margin: 8px;
+  max-width: 80%; /* Limit the width of each message */
+  word-wrap: break-word; /* Break long words to fit within the container */
+  border-radius: 8px;
+}
+
+.user-message {
+  background-color: #4CAF50; /* Green background for user messages */
+  color: #fff; /* White text for user messages */
+  text-align: right;
+}
+
+.bot-message {
+  background-color: #008CBA; /* Blue background for bot messages */
+  color: #fff; /* White text for bot messages */
+  text-align: left;
+}
+
+/* Add other styles as needed */
 

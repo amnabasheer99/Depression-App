@@ -2,12 +2,14 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import LandingPage from "./components/LandingPage";
+import Dashboard from "./components/Dashboard";
 import {
   ClerkProvider,
-  SignInButton,
-  SignOutButton,
   SignedIn,
   SignedOut,
+  SignInButton,
+  UserButton,
+  useUser,
 } from "@clerk/clerk-react";
 
 // Import your publishable key
@@ -22,12 +24,15 @@ function App() {
   return (
     <Router>
       <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
-        <>
-          <NavBar />
+        <NavBar />
+        <SignedIn>
+          <Dashboard />
+        </SignedIn>
+        <SignedOut>
           <Routes>
             <Route path="/" element={<LandingPage />} />
           </Routes>
-        </>
+        </SignedOut>
       </ClerkProvider>
     </Router>
   );

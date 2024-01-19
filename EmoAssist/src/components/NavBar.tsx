@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import {
   SignedIn,
   SignedOut,
@@ -12,6 +14,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Logo from "../assets/logo.png";
+import Onboarding from "./Onboarding";
 
 const NavBar = () => {
   const { isSignedIn, user } = useUser();
